@@ -13,6 +13,7 @@ var app = express();
 app.get('/', function(req, res) {
     res.sendfile('index.html');
 });
+app.use(express.static("ff"))
 
 // запускаем сервер на порту 8080
 app.listen(8080);

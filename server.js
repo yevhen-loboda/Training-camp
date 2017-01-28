@@ -4,6 +4,7 @@
 
 // берём Express
 var express = require('express');
+var pgp = require('pg-promise') ();
 
 // создаём Express-приложение
 var app = express();
@@ -13,7 +14,8 @@ var app = express();
 //app.get('/', function(req, res) {
 //    res.sendfile('index.html');
 //});
-app.use(express.static("ff"))
+app.use(express.static("ff"));
+
 
 // запускаем сервер на порту 8080
 app.listen(8080);
